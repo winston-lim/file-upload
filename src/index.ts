@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import uploadRouter from "./route/upload";
 import multer from "multer";
 import multerS3 from "multer-s3";
 import AWS from "aws-sdk";
