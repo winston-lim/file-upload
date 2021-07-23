@@ -1,5 +1,5 @@
-import { File } from "./file";
-import { UploadedFile } from "./uploadedFile";
+import { File } from "./File";
+import { UploadedFile } from "./UploadedFile";
 
 export interface FileUploader {
 	upload: (

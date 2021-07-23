@@ -1,7 +1,7 @@
 import AWS from "aws-sdk";
 import stream from "stream";
-import { File } from "../models/file";
-import { UploadedFile } from "../models/uploadedFile";
+import { File } from "../models/File";
+import { UploadedFile } from "../models/UploadedFile";
 
 type S3UploadConfig = {
 	accessKeyId: string;
@@ -28,7 +28,7 @@ export class AWSS3Uploader {
 				secretAccessKey: config.secretAccessKey,
 			},
 		});
-		this.s3 = new AWS.S3();
+		this.s3 = new AWS.S3({ apiVersion: "2006-03-01" });
 		this.config = config;
 	}
 
